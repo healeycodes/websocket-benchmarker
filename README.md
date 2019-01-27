@@ -46,7 +46,7 @@ E.g., `0.1, 0.1, 0.1` for one client performing three roundtrips.
 Full end-to-end testing via unittest.
 
 ```
-python test_bench.py
+python -m unittest
 ...
 ----------------------------------------------------------------------
 Ran 3 tests in 8.371s
