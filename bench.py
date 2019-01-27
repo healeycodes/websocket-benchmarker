@@ -44,7 +44,7 @@ async def client(state):
         A Dictionary-like object with the key `clients` -- the number of clients spawned thus far.
     '''
     if state['clients'] >= clients:
-        return
+        return 'Reached max clients.'
     state['clients'] += 1
     timings = list()
     start = time.perf_counter()
