@@ -8,17 +8,23 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Benchmark a WebSocket server')
 parser.add_argument('--h', dest='host',
-                    help='Host address of WebSocket server', default='localhost:3000')
+                    help='Host address of WebSocket server',
+                    default='localhost:3000')
 parser.add_argument('--n', dest='clients',
-                    help='Number of clients to create', default=1000, type=int)
+                    help='Number of clients to create',
+                    default=1000, type=int)
 parser.add_argument('--c', dest='concurrency',
-                    help='Number of concurrent clients', default=64, type=int)
+                    help='Number of concurrent clients',
+                    default=64, type=int)
 parser.add_argument('--r', dest='roundtrips',
-                    help='Roundtrips per client', default=5, type=int)
+                    help='Roundtrips per client',
+                    default=5, type=int)
 parser.add_argument('--s', dest='msg_size',
-                    help='Message size in characters', default=30, type=int)
+                    help='Message size in characters',
+                    default=30, type=int)
 parser.add_argument('--l', dest='log_path',
-                    help='Path to create or append to a log file', default=os.path.join('.', 'log.txt'))
+                    help='Path to create or append to a log file',
+                    default=os.path.join('.', 'log.txt'))
 args = parser.parse_args()
 
 host = args.host
