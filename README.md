@@ -4,16 +4,7 @@ Message throughput is how fast a WebSocket server can parse and respond to a mes
 
 <br>
 
-```
-python .\bench.py
-Benchmarking localhost:3000 with 1000 total clients. 64 clients concurrently. 5 roundtrips per client.
-
-Min: 0.04235544116481793
-Mean: 0.16393149133306262
-Max: 0.42205915518170034
-
-Raw results sent to .\log.txt
-```
+![](https://github.com/healeycodes/websocket-benchmarker/blob/master/images/header.png)
 
 <br>
 
