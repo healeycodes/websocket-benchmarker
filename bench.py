@@ -16,7 +16,7 @@ parser.add_argument('--c', dest='concurrency',
 parser.add_argument('--r', dest='roundtrips',
                     help='Roundtrips per client', default=5)
 parser.add_argument('--s', dest='msg_size',
-                    help='Message size', default=30)
+                    help='Message size in characters', default=30)
 parser.add_argument('--l', dest='log_path',
                     help='Path to create or append to a log file', default=os.path.join('.', 'log.txt'))
 args = parser.parse_args()
@@ -30,7 +30,7 @@ log_file = open(args.log_path, 'a')
 log_memory = list()
 
 print(f'Benchmarking {host} with {clients} total clients. ' +
-      f'{concurrency} clients concurrently. {roundtrips} roundtrips per client')
+      f'{concurrency} clients concurrently. {roundtrips} roundtrips per client.')
 
 
 async def client(state):
