@@ -27,11 +27,14 @@ parser.add_argument('--l', dest='log_path',
                     default=os.path.join('.', 'log.txt'))
 args = parser.parse_args()
 
+# get benchmark parameters
 host = args.host
 clients = args.clients
 concurrency = args.concurrency
 roundtrips = args.roundtrips
 message = 'a' * args.msg_size
+
+# open log file
 log_file = open(args.log_path, 'a')
 log_memory = list()
 
@@ -71,8 +74,13 @@ async def client(state):
     await asyncio.ensure_future(client(state))
 
 
+# create an amount of client coroutine functions to satisfy args.concurrency
 con_clients = [client] * concurrency
+
+# pass them all a 'link' to the same state Dictionary
 state = dict({'clients': 0})
+
+# run them concurrently
 main = asyncio.gather(*[i(state) for i in con_clients])
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main)
@@ -102,5 +110,7 @@ def stats(timings):
     return dict({'min': min_timing, 'mean': mean_timing, 'max': max_timing})
 
 
+# the benchmark is finished, build stats by passing an in-memory copy of the log
 stats(log_memory)
+
 print(f'\nRaw results sent to {log_file.name}')
