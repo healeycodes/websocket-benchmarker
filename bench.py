@@ -83,9 +83,12 @@ def stats(timings):
         A List of Lists containing message timings.
     '''
     timings_flat = [t for client_timings in timings for t in client_timings]
-    print(f'Min: {min(timings_flat)}')
-    print(f'Mean: {sum(timings_flat)/len(timings_flat)}')
-    print(f'Max: {max(timings_flat)}')
+    min_timing = min(timings_flat) * 1000
+    mean_timing = sum(timings_flat) / len(timings_flat) * 1000
+    max_timing = max(timings_flat) * 1000
+    print(f'Min: {min_timing:.2f}ms')
+    print(f'Mean: {mean_timing:.2f}ms')
+    print(f'Max: {max_timing:.2f}ms')
 
 
 stats(log_memory)
