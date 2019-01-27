@@ -8,4 +8,4 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - python test_bench.py
+  - python ./test_bench.py
