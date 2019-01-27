@@ -8,6 +8,5 @@ install:
   - pip install -r requirements.txt
 
 script:
-  - ls
-  - chmod +x test_bench.py
-  - ./test_bench.py
+  - ls # sanity logging
+  - python -m unittest
