@@ -48,6 +48,11 @@ async def client(state):
     ----------
     state : Dictionary
         A Dictionary-like object with the key `clients` -- the number of clients spawned thus far.
+
+    Returns
+    -------
+    string
+        A statement when the max number of clients have been spawned.
     '''
     if state['clients'] >= clients:
         return 'Reached max clients.'
@@ -81,6 +86,11 @@ def stats(timings):
     ----------
     timings : List(List(Float))
         A List of Lists containing message timings.
+
+    Returns
+    -------
+    Dictionary
+        Stats from the provided timings. Keys: `min`, `mean`, and `max`. 
     '''
     timings_flat = [t for client_timings in timings for t in client_timings]
     min_timing = min(timings_flat) * 1000
@@ -89,6 +99,7 @@ def stats(timings):
     print(f'Min: {min_timing:.2f}ms')
     print(f'Mean: {mean_timing:.2f}ms')
     print(f'Max: {max_timing:.2f}ms')
+    return dict({'min': min_timing, 'mean': mean_timing, 'max': max_timing})
 
 
 stats(log_memory)
