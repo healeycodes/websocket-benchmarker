@@ -2,6 +2,8 @@
 
 Message throughput is how fast a WebSocket server can parse and respond to a message. Some people consider this to be a good reference of a framework/library/server's performance. For this benchmark program, an echo server is presumed.
 
+<br>
+
 ```
 python .\bench.py
 Benchmarking localhost:3000 with 1000 total clients. 64 clients concurrently. 5 roundtrips per client.
@@ -9,6 +11,8 @@ Min: 0.04235544116481793
 Mean: 0.16393149133306262
 Max: 0.42205915518170034
 ```
+
+<br>
 
 ---
 
