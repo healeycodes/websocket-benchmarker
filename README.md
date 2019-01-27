@@ -18,6 +18,12 @@ Now with 100% more bleeding edge :zap: [asyncio](https://docs.python.org/3/libra
 
 <br>
 
+### Installation
+
+`pip install -r requirements.txt`
+
+<br>
+
 ### Usage
 
 This program expects the host to be an echo server and measures the time between sending a message and recieving the same message back from the host.
