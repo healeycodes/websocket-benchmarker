@@ -43,8 +43,7 @@ print(f'Benchmarking {host} with {clients} total clients. ' +
 
 
 async def client(state):
-    '''
-    A WebSocket client, which sends a message and expects an echo `roundtrip` number of times.
+    '''A WebSocket client, which sends a message and expects an echo `roundtrip` number of times.
     This client will spawn a copy of itself afterwards, so that the requested concurrency is continuous.
 
     Parameters
@@ -55,8 +54,7 @@ async def client(state):
     Returns
     -------
     string
-        A statement when the max number of clients have been spawned.
-    '''
+        A statement when the max number of clients have been spawned.'''
     if state['clients'] >= clients:
         return 'Reached max clients.'
     state['clients'] += 1
@@ -87,8 +85,7 @@ loop.run_until_complete(main)
 
 
 def stats(timings):
-    '''
-    Prints stats based off raw benchmark data.
+    '''Prints stats based off raw benchmark data.
 
     Parameters
     ----------
@@ -98,8 +95,7 @@ def stats(timings):
     Returns
     -------
     Dictionary
-        Stats from the provided timings. Keys: `min`, `mean`, and `max`. 
-    '''
+        Stats from the provided timings. Keys: `min`, `mean`, and `max`. '''
     timings_flat = [t for client_timings in timings for t in client_timings]
     min_timing = min(timings_flat) * 1000
     mean_timing = sum(timings_flat) / len(timings_flat) * 1000
