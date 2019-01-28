@@ -20,6 +20,8 @@ Now with 100% more bleeding edge :zap: [asyncio](https://docs.python.org/3/libra
 
 ### Installation
 
+Python 3.6.5+.
+
 `pip install -r requirements.txt`
 
 <br>
