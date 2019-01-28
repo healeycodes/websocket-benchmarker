@@ -67,6 +67,7 @@ async def client(state):
             if response != message:
                 raise 'Message recieved differs from message sent'
             timings.append(time.perf_counter() - start)
+        await websocket.close()
     log_file.write(','.join([str(t) for t in timings]) + '\n')
     log_memory.append(timings)
     await asyncio.ensure_future(client(state))
