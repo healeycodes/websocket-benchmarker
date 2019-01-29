@@ -1,6 +1,6 @@
 ## :radio: WebSocket Benchmarker :watch:
 
-Message throughput is how fast a WebSocket server can parse and respond to a message. Some people consider this to be a good reference of a framework/library/server's performance.
+*Message throughput* is how fast a WebSocket server can parse and respond to a message. Some people consider this to be a good reference of a framework/library/server's performance.
 
 <br>
 
