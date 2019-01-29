@@ -1,6 +1,6 @@
 ## :radio: WebSocket Benchmarker :watch:
 
-*Message throughput* is how fast a WebSocket server can parse and respond to a message. Some people consider this to be a good reference of a framework/library/server's performance.
+*Message throughput* is how fast a WebSocket server can parse and respond to a message. Some people consider this to be a good reference of a framework/library/server's performance. This tool measures the message throughput under load by mocking concurrent clients.
 
 <br>
 
@@ -28,7 +28,7 @@ Python 3.6.5+.
 
 ### Usage
 
-This program expects the host to be an echo server and measures the time between sending a message and recieving the same message back from the host.
+This program expects the host to be an echo server and measures the time between sending a message and recieving the same message back from the host. It performs this for a number of client connections simultaneously and is designed to produce repeatable results.
 
 `python bench.py` will launch the benchmark and print statistics to stdout. If the log file path is to a non-file then one will be created otherwise results will be appended to the existing file.
 
