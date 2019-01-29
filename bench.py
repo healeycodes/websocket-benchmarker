@@ -44,7 +44,7 @@ print(f'Benchmarking {host} with {clients} total clients. ' +
 
 async def client(state):
     '''A WebSocket client, which sends a message and expects an echo `roundtrip` number of times.
-    This client will spawn a copy of itself afterwards, so that the requested concurrency is continuous.
+    This client will spawn a copy of itself afterwards, so that the requested concurrency-level is continuous.
 
     Parameters
     ----------
