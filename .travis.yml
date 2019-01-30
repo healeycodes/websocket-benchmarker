@@ -2,11 +2,11 @@
 
 language: python
 python:
-  - "3.6"
+  - "3.7-dev"
 
 install:
   - pip install -r requirements.txt
 
 script:
   - ls # sanity logging
-  - python -m unittest
+  - python test_bench.py python # pass python env for subprocess calls
