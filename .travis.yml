@@ -9,4 +9,4 @@ install:
 
 script:
   - ls # sanity logging
-  - python test_bench.py python # pass python env for subprocess calls
+  - python -m unittest --verbose
