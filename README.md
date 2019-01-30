@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/healeycodes/websocket-benchmarker.svg?branch=master)](https://travis-ci.org/healeycodes/websocket-benchmarker)
+
 ## :radio: WebSocket Benchmarker :watch:
 
 *Message throughput* is how fast a WebSocket server can parse and respond to a message. Some people consider this to be a good reference of a framework/library/server's performance. This tool measures the message throughput under load by mocking concurrent clients.
