@@ -9,4 +9,4 @@ install:
 
 script:
   - ls # sanity logging
-  - python -m unittest
+  - python -m unittest --verbose
