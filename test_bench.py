@@ -4,7 +4,7 @@ import subprocess
 import warnings
 
 # set python environmental variable
-python_env = 'python'
+python_env = sys.executable
 
 
 def ignore_resource_warning(func):
