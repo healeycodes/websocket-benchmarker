@@ -65,7 +65,7 @@ async def client(state):
             await websocket.send(message)
             response = await websocket.recv()
             if response != message:
-                raise 'Message recieved differs from message sent'
+                raise 'Message received differs from message sent'
             timings.append(time.perf_counter() - start)
         await websocket.close()
     log_file.write(','.join([str(t) for t in timings]) + '\n')
