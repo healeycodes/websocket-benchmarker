@@ -59,10 +59,10 @@ async def client(state):
         return 'Reached max clients.'
     state['clients'] += 1
     timings = list()
-    start = time.perf_counter()
     async with websockets.connect(f'ws://{host}') as websocket:
         for i in range(roundtrips):
             await websocket.send(message)
+            start = time.perf_counter()
             response = await websocket.recv()
             if response != message:
                 raise 'Message received differs from message sent'
